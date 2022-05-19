@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUEENY CALLOS</title>
+    <style>
+    .button-fields > input {
+            line-height: 1em;
+            padding: 0.7em;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="makeThisCenter">
+     
+        <h2></h2>
+        <div class="button-fields">
+            <input type="text" placeholder="Enter a string">
+            <button type="button">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const input = document.querySelector("input");
+        const result = document.querySelector("h2");
+        
+        document.querySelector("button").addEventListener("click",()=> {
+            if(input.value.toString().substring(0,4) == "New!"){
+                result.textContent = 'Result: "' + input.value + '"';
+                return;
+            }
+            
+            result.textContent = 'Result: "New! ' + input.value + '"';
+            
+        });
+    </script>
+</body>
+</html>
